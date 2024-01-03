@@ -1,0 +1,130 @@
+/* Existing styles from before... */
+/* Reset some basic elements */
+body, h1, input, button, select {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the body */
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Style the h1 element */
+h1 {
+    color: #333;
+}
+
+/* Style the input field */
+#addressInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Existing styles from before... */
+
+/* Style for the required field indicator */
+.required {
+    color: black; /* Red color to make it noticeable */
+    margin-left: 5px; /* Small space between the label and the asterisk */
+}
+
+/* Continue with any additional styles... */
+
+/* Style the suggestions container for a more polished look */
+#suggestionsContainer {
+    max-height: 200px; /* Limit the height of the suggestions box */
+    overflow-y: auto; /* Add scrollbar if there are many suggestions */
+    background-color: #ffffff; /* White background for the suggestions */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border for definition */
+    position: absolute; /* Position it below the input box */
+    width: calc(100% - 20px); /* Full width taking padding into account */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Style individual suggestion entries */
+#suggestionsContainer div {
+    padding: 10px 20px; /* More padding for touch friendliness */
+    cursor: pointer; /* Reiterate that these are clickable */
+    border-bottom: 1px solid #eee; /* Subtle separator */
+}
+
+/* Style for hover and focus states to indicate interactivity */
+#suggestionsContainer div:hover, #suggestionsContainer div:focus {
+    background-color: #f9f9f9; /* Light grey background on hover/focus */
+}
+
+/* Optional: Style for the active suggestion */
+#suggestionsContainer div.active {
+    background-color: #efefef; /* Slightly darker grey for the active selection */
+}
+
+/* Continue with any additional styles... */
+/* Style the form group */
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style the select element */
+#propertyType {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+
+/* Style the button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Style the results container */
+#results {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #addressInput, #propertyType, button {
+        width: calc(100% - 20px);
+    }
+}

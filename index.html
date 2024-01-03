@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geoscape Address Autocomplete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Security Address <span class="required">*</span></h1>
+    <input type="text" id="addressInput" placeholder="Start typing an address...">
+    <div id="suggestionsContainer"></div>
+    <div class="form-group">
+        <label for="propertyType">Property Type:<span class="required">*</span></select></label>
+        <select id="propertyType" required> 
+            <option value="Residential" disabled>Residential</option>
+            <option value="House">House</option>
+            <option value="Condo">Apartment/Unit</option>
+            <option value="Townhouse">Townhouse</option>
+            <option value="Apartment">Villa</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Semi-detached/Maisonette">Semi-detached/Maisonette</option>
+            <option value="Terrace">Terrace</option>
+            <option value="Dual Occupancy">Dual Occupancy</option>
+            <option value="Serviced Apartment/Short Term Rental">Short term Rental</option>
+            <option value="Display Home">Display Home</option>
+            <option value="Other">Other</option>
+
+        </select>
+    </div>
+    
+    <div class="form-group" id="otherOptionsContainer" style="display:none;">
+        <label for="otherPropertyType">Other Property Type:</label>
+        <select id="otherPropertyType">
+            <!-- These options are hardcoded by you and shown when "Other" is selected -->
+            <option value="Office">Office</option>
+            <option value="Retail">Retail</option>
+            <option value="Block of Flats">Block of Flats</option>
+            <option value="Boarding House">Boarding House</option>
+            <option value="Warehouse">Warehouse</option>
+            <option value="Showroom/Bulky Goods">Showroom/Bulky Goods</option>
+            <option value="Hotel/Motel">Hotel/Motel</option>
+            <option value="Pub/Tavern or Gaming">Pub/Tavern or Gaming</option>
+            <option value="Medical/Consulting">Medical Consulting</option>
+            <option value="Child Care">Child Care</option>
+            <option value="Aged Care">Aged Care</option>
+            <option value="Land/Development Site">Land/Development Site</option>
+            <option value="Other">Other</option>
+            <!-- ... more options ... -->
+        </select>
+    </div>
+
+
+    <button onclick="fetchPropertyData()">Search</button>
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
